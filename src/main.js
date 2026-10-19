@@ -47,6 +47,7 @@ function analyzeSalesData(data, options) {
     !Array.isArray(data.sellers) ||
     data.sellers.length === 0 ||
     !Array.isArray(data.customers) ||
+    data.customers.length === 0 ||
     !Array.isArray(data.products) ||
     data.products.length === 0 ||
     !Array.isArray(data.purchase_records) || 
