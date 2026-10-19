@@ -45,9 +45,12 @@ function analyzeSalesData(data, options) {
   if (
     !data ||
     !Array.isArray(data.sellers) ||
+    data.sellers.length === 0 ||
     !Array.isArray(data.customers) ||
     !Array.isArray(data.products) ||
-    !Array.isArray(data.purchase_records)
+    data.products.length === 0 ||
+    !Array.isArray(data.purchase_records) || 
+    data.purchase_records.length === 0
   ) {
     throw new Error("Некорректная структура данных");
   }
